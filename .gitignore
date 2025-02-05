@@ -1,4 +1,12 @@
+tree
+
 .streamlit/secrets.toml
+
+# Scrapy
+.scrapy
+
+# Selenium
+selenium-screenshots/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
