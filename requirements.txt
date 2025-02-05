@@ -1,1 +1,4 @@
+scrapy
+selenium
+st-gsheets-connection
 streamlit
