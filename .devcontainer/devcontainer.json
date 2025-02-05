@@ -1,6 +1,5 @@
 {
   "name": "Python 3",
-  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
   "image": "mcr.microsoft.com/devcontainers/python:3.12-alpine",
   "customizations": {
     "codespaces": {
@@ -17,7 +16,7 @@
       ]
     }
   },
-  "updateContentCommand": "[ -f packages.txt ] && sudo apk update && sudo apk upgrade && sudo xargs apk add <packages.txt; sudo apk add py3-pip; [ -f requirements.txt ] && pip install --user -r requirements.txt; pip install --user streamlit; echo '✅ Packages installed and Requirements met'",
+  "updateContentCommand": "apk update && apk upgrade && apk add python3 py3-pip && [ -f packages.txt ] && xargs apk add <packages.txt && [ -f requirements.txt ] && pip install --user -r requirements.txt && pip install --user streamlit; echo '✅ Packages installed and Requirements met'",
   "postAttachCommand": {
     "server": "streamlit run dashboard/app.py --server.enableCORS false --server.enableXsrfProtection false"
   },
